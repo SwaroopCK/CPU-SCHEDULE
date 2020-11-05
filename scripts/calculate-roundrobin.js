@@ -3,7 +3,6 @@ function calculateRR(){
     var arrivalTime = document.getElementById("arrival-time").value;
     var burstTime = document.getElementById("burst-time").value;
     var qno = document.getElementById("q-no").value;
-    document.write(qno);
     
     var arrivalTimeStrArr = arrivalTime.split(",");
     var burstTimeStrArr = burstTime.split(",");
@@ -74,8 +73,8 @@ function calculateRR(){
         catch(err){document.getElementById("tableRowId").innerHTML=err.message;}
 	}
     function RRAlgorithm( at, bt, qno){
-		var currentprocess=null;
-		var currentprocess="idle";
+	var currentprocess=null;
+	var currentprocess="idle";
         var time = 0;
         var i = 0;
 		var cnt=0;
@@ -101,9 +100,7 @@ function calculateRR(){
 		try{
 			i=0;
        while(true){
-			tq=0;
-			
-			
+			tq=0;		
             if(currenttime<at[i])
 			{
 				currentprocess="idle";
@@ -200,6 +197,5 @@ function calculateRR(){
         }
     }
    
-
     document.getElementById("process-division").style.display = "block";
 }
