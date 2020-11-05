@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>Notes</title>
+
+<!--<meta  charset="utf-8">-->
+<meta name="viewport" content="width=device-width , initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="project css/bootstrap.css" type="text/css">
+<script src="project js/slim.min.js" type="text/javascript"></script>
+<script src="project js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="project js/popper.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>	
+    
+		<nav class="navbar navbar-expand-lg bg-success navbar-dark justify-content-between">
+			<a class="navbar-brand " href="#" ><img src="projectimages/1logo.png" alt=""></a>
+				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+				
+					<ul class="nav navbar-nav ">
+						<li class="nav-item ">
+						<a class="nav-link" href="index.html" >Home</a>
+						</li>
+							<div class="dropdown-divider"></div>
+						<li class="nav-item">
+						<a class="nav-link" href="algorithms.html">Algorithms</a>
+						</li>
+							<div class="dropdown-divider"></div>
+						<li class="nav-item active">
+						<a class="nav-link" href="notes.html">Notes</a>
+						</li>
+							<div class="dropdown-divider"></div>
+						<li class="nav-item">
+						<a class="nav-link" href="pgallary.html">Gallary</a>
+						</li>
+							<div class="dropdown-divider"></div>
+						<li class="nav-item">
+						<a class="nav-link" href="paboutus.html">About Us</a>
+						</li>
+					</ul>
+					
+				</div>	
+	    </nav>
+		
+		<div class="container-fluid">	
+			<div class="row bg-secondary">		
+				<div id="accordion">
+				  <div class="card">
+					<div class="card-header" id="headingOne">
+					  <h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						  What is CPU Scheduling?
+						</button>
+					  </h5>
+					</div>
+
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					  <div class="card-body">
+								CPU scheduling is a process which allows one process to use the CPU while 
+                                the execution of another process is on hold(in waiting state) 
+                                due to unavailability of any resource like I/O etc, 
+                                thereby making full use of CPU. 
+                                The aim of CPU scheduling is to make the system efficient, fast and fair.
+                                <br>
+                                Whenever the CPU becomes idle, the operating system must select one of the 
+                                processes in the ready queue to be executed. The selection process is carried 
+                                out by the short-term scheduler (or CPU scheduler). 
+                                The scheduler selects from among the processes in memory that are ready to 
+                                execute, and allocates the CPU to one of them.     
+					  </div>
+					</div>
+				  </div>
+				  <div class="card">
+					<div class="card-header" id="headingTwo">
+					  <h5 class="mb-0">
+						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						  Types of CPU Scheduling
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+					  <div class="card-body">
+						CPU scheduling decisions may take place under the following four circumstances:
+                        When a process switches from the running state to the waiting state(for I/O request or invocation of wait for the termination of one of the child processes).
+                        When a process switches from the running state to the ready state (for example, when an interrupt occurs).
+                        When a process switches from the waiting state to the ready state(for example, completion of I/O).
+                        When a process terminates.
+                        In circumstances 1 and 4, there is no choice in terms of scheduling. A new process(if one exists in the ready queue) must be selected for execution. There is a choice, however in circumstances 2 and 3.
+                        When Scheduling takes place only under circumstances 1 and 4, we say the scheduling scheme is non-preemptive; otherwise the scheduling scheme is preemptive.
+					  </div>
+					</div>
+				  </div>
+				  <div class="card">
+					<div class="card-header" id="headingThree">
+					  <h5 class="mb-0">
+						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						  Non-Preemptive Scheduling
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					  <div class="card-body">
+                                Under non-preemptive scheduling, once the CPU has been allocated to a process, the process
+								keeps the CPU until it releases the CPU either by terminating or by switching to the 
+								waiting state. This scheduling method is used by the Microsoft Windows 3.1 and by the Apple Macintosh operating systems.
+                                It is the only method that can be used on certain hardware platforms, because It does not 
+								require the special hardware(for example: a timer) needed for preemptive scheduling.                        
+					  </div>
+					</div>
+				  </div>
+				  <div class="card">
+					<div class="card-header" id="headingThree">
+					  <h5 class="mb-0">
+						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseThree">
+						  Preemptive Scheduling
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseFore" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					  <div class="card-body">
+                          In this type of Scheduling, the tasks are usually assigned with priorities.
+									  At times it is necessary to run a certain task that has a higher priority before
+									  another task although it is running. Therefore, the running task is interrupted
+									  for some time and resumed later when the priority task has finished its execution.
+                                                 
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="row bg-success">
+			<div class="col-5 col-sm-4 col-md-4 mr-3 p-4">
+				<h5>Quicklinks</h5>
+				<table height="100" width="220">
+				<tr>
+					<td><a class="link" href="PIndex.html">Home</a><br></td>
+					<td><a class="link" href="paboutus.html">About Us</a><br></td>
+				</tr>
+				<tr>
+					<td><a class="link" href="pgallary.html">Gallary</a><br></td>
+					<td><a class="link" href="notes.html">Notes</a><br></td>
+				</tr>
+				<tr>
+					<td><a class="link" href="algorithms.html">Algorithms</a><br></td>
+				
+				</tr>
+				</table>		
+			</div>
+			
+			<div class="col-4 col-sm-4 col-md-5 mr-3 p-4">
+				<h5>Contact/Mail me: <br></h5>
+				<p>Phone <b>:</b> 12345678<br>
+				Email  <b>:</b> swupkorde@gmail.com
+				</p>
+				</div>
+				
+				<div class="col-3 col-sm-3 col-md-2 p-4">
+				<h5>Visit Us<br></h5>
+				<a class="link" href="https://www.facebook.com/people/Swaroop-Korde/100009398646598"><img src="projectimages/logo2.png"></a><br>
+				<a class="link" href="https://www.instagram.com/swaroopkorde/"><img src="projectimages/logo4.png"></a>
+				</div>
+			</div>	
+		
+		</div>
+</body>
+</html>
